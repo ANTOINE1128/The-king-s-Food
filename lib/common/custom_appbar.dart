@@ -24,7 +24,7 @@ class CustomAppBar extends StatelessWidget {
               CircleAvatar(
                 radius: 25.r,
                 backgroundColor: Colors.white,
-                backgroundImage: const AssetImage("assets/images/profile.jpg"),
+                backgroundImage: const AssetImage('assets/images/profile.jpg'),
               ),
               
               Padding(
@@ -39,7 +39,7 @@ class CustomAppBar extends StatelessWidget {
                     ),
 
                     ReusableText (
-                    text: "Mejdlaya-Zgharta karmaliyeh Road",
+                    text: 'Mejdlaya-Zgharta karmaliyeh Road',
                     style:appStyle( 8, Colors.white, FontWeight.normal)
                     ),
                   ],
