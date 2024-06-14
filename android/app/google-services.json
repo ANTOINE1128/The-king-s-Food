@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "390243950339",
+    "project_id": "restaurant-foodly-cd875",
+    "storage_bucket": "restaurant-foodly-cd875.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390243950339:android:cf95a5d2a5605649739336",
+        "android_client_info": {
+          "package_name": "com.example.restaurant_foodlyy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHmvRcGHeYNA8UJS70cR919YKTzxNLlb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
