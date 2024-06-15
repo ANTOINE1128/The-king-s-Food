@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:restaurant_foodlyy/common/app_style.dart';
 import 'package:restaurant_foodlyy/common/background_container.dart';
 import 'package:restaurant_foodlyy/common/custom_appbar.dart';
-import 'package:restaurant_foodlyy/common/tab_widget.dart';
 import 'package:restaurant_foodlyy/constants/constants.dart';
+import 'package:restaurant_foodlyy/views/home/widget/orders/new_orders.dart';
 
+import 'home_tabs.dart';
 import 'widget/home_tiles.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,30 +39,37 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           SizedBox(
             height: 15.h,
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 4.w),
-            child: Container(
-              height: 25.h,
-              width: width,
-              decoration: BoxDecoration(
-                color: kOffWhite,
-                borderRadius: BorderRadius.circular(25.r),
-              ),
-              child: TabBar(
-                controller: _tabController,
-                indicator: BoxDecoration(
-                    color: kPrimary, borderRadius: BorderRadius.circular(25.r)),
-                labelColor: kLightWhite,
-                dividerColor: Colors.transparent,
-                unselectedLabelColor: kGrayLight,
-                isScrollable: true,
-                tabAlignment: TabAlignment.start,
-                labelPadding: EdgeInsets.zero,
-                labelStyle: appStyle(12, kLightWhite, FontWeight.normal),
-                tabs: List.generate(orderList.length, (i) {
-                  return TabWidget(text: orderList[i]);
-                }),
-              ),
+          HomeTabs(tabController: _tabController),
+          SizedBox(
+            height: 15.h,
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 12.w),
+            height: height * 0.7,
+            color: Colors.transparent,
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                const NewOrders(),
+                Container(
+                  color: Colors.yellow,
+                ),
+                Container(
+                  color: Colors.green,
+                ),
+                Container(
+                  color: Colors.blue,
+                ),
+                Container(
+                  color: Colors.orange,
+                ),
+                Container(
+                  color: Colors.black,
+                ),
+                Container(
+                  color: Colors.purple,
+                ),
+              ],
             ),
           )
         ],

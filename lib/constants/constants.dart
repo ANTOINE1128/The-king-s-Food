@@ -28,7 +28,7 @@ List<String> orderList = [
   'Preparing',
   'Ready',
   'Picked Up',
-  'Self Deliveries',
+  'Take Away',
   'Delivered',
   'Cancelled'
 ];
