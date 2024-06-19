@@ -4,6 +4,7 @@ import 'package:restaurant_foodlyy/common/background_container.dart';
 import 'package:restaurant_foodlyy/common/custom_appbar.dart';
 import 'package:restaurant_foodlyy/constants/constants.dart';
 import 'package:restaurant_foodlyy/views/home/widget/orders/new_orders.dart';
+import 'package:restaurant_foodlyy/views/home/widget/orders/preparing.dart';
 
 import 'home_tabs.dart';
 import 'widget/home_tiles.dart';
@@ -50,10 +51,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: TabBarView(
               controller: _tabController,
               children: [
-                const NewOrders(),
-                Container(
-                  color: Colors.yellow,
-                ),
+                 NewOrders(),
+                 Preparing(),
                 Container(
                   color: Colors.green,
                 ),

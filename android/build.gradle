@@ -1,11 +1,13 @@
 buildscript {
+    ext.kotlin_version = '1.9.0'
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.3.2' // Compatible with Gradle 8.8
-        classpath 'com.google.gms:google-services:4.4.2' // Ensure this is the latest version or at least recent
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:8.3.2'
+        classpath 'com.google.gms:google-services:4.4.2'
     }
 }
 
@@ -21,5 +23,4 @@ subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
 
-// Apply the Google services plugin at the end of the file
 apply plugin: 'com.google.gms.google-services'
